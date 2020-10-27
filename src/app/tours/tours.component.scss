@@ -1,0 +1,73 @@
+mat-form-field {
+  margin-right: 12px;
+}
+
+.background-card {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+}
+
+section {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(12, 12, 12, 0.5)),
+    url(../../assets/japan-main-hero.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+mat-form-field {
+  background: rgba(255, 215, 64, 0.8);
+  margin: 1rem 0 1rem 0;
+  border-radius: 5px;
+  color: #000000;
+}
+
+button {
+  background: rgb(255, 215, 64);
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 5px 0px 0px rgb(165, 138, 42);
+  font-size: 1.8rem;
+  font-family: "Permanent Marker", cursive;
+  &:active {
+    box-shadow: 0px 2px 0px 0px rgb(165, 138, 42);
+    top: 3px;
+  }
+}
+
+.custom-label {
+  background: rgb(255, 70, 64);
+  padding: 1rem 3rem;
+  border-radius: 5px;
+  color: #000000;
+  font-size: 1.5rem;
+  transition: 0.1s linear;
+  box-shadow: 0px 6px 0px 0px rgb(197, 54, 49);
+  cursor: pointer;
+  &:active {
+    box-shadow: 0px 2px 0px 0px rgb(197, 54, 49);
+    transform: translateY(4px);
+  }
+}
+
+.custom-check {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+input:checked + label {
+  background: rgb(64, 255, 105);
+  box-shadow: 0px 2px 0px 0px rgb(40, 167, 68);
+  transform: translateY(4px);
+  transition: 0.1s linear;
+  //   &:active {
+  //     box-shadow: 0px 2px 0px 0px rgb(40, 167, 68);
+  //     transform: translateY(4px);
+  //   }
+}

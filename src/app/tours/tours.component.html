@@ -1,0 +1,70 @@
+<section class="pb-3">
+  <div class="container-fluid">
+    <form [formGroup]="form">
+      <div class="col-8 offset-2">
+        <mat-form-field appearance="fill" class="col-12">
+          <mat-label
+            >Enter Date ----> You can also click on the Calendar on the right
+            hand side ----->
+          </mat-label>
+          <mat-date-range-input
+            [rangePicker]="picker"
+            formGroupName="daterange"
+          >
+            <input
+              matStartDate
+              placeholder="Start date"
+              formControlName="start"
+            />
+            <input matEndDate placeholder="End date" formControlName="end" />
+          </mat-date-range-input>
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="picker"
+          ></mat-datepicker-toggle>
+          <mat-date-range-picker #picker></mat-date-range-picker>
+        </mat-form-field>
+      </div>
+
+      <div
+        class="background-card col-10 my-2 offset-1 row"
+        *ngFor="let product of products; index as productId"
+      >
+        <img class="col-4 img-fluid p-3" src="{{ product.photo }}" alt="" />
+        <div class="col-8 p-3 text-light">
+          <h1>{{ product.name }}</h1>
+          <p>date: {{ product.date }}</p>
+          <h3>What you can expect</h3>
+          <p>
+            {{ product.description }}
+          </p>
+          <h3>Price for three weeks</h3>
+          <div>
+            <input
+              class="custom-check"
+              type="checkbox"
+              name="try"
+              id="{{ productId }}"
+              value="ka"
+            />
+            <label class="custom-label" for="{{ productId }}">{{
+              product.price | currency
+            }}</label>
+          </div>
+        </div>
+      </div>
+      <button class="col-8 offset-2" (click)="onSubmit()">
+        Storry Cart <i class="fas fa-shopping-cart"></i>
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- <div *ngFor="let product of products">
+  <h2>
+    {{ product.destination }}
+  </h2>
+  <p>{{ product.price }}</p>
+  <p>{{ product.date }}</p>
+  <p>{{ product.description }}</p>
+</div> -->

@@ -1,0 +1,12 @@
+section {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(12, 12, 12, 0.5)),
+    url(../../assets/japan-main-hero.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 75vh;
+}
+
+mat-expansion-panel {
+  background: rgba(255, 215, 64, 0.8);
+}

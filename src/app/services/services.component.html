@@ -1,0 +1,16 @@
+<Section class="py-3">
+  <div class="container-fluid">
+    <div
+      class="background-card col-10 my-2 offset-1 row"
+      *ngFor="let service of services; index as serviceId"
+    >
+      <div class="p-3 text-light">
+        <h1>{{ service.name }}</h1>
+        <h2>description</h2>
+        <p>{{ service.description }}</p>
+        <p class="costs">{{ service.price | currency }}</p>
+        <button mat-raised-button (click)="addToCart(service)">Buy</button>
+      </div>
+    </div>
+  </div>
+</Section>

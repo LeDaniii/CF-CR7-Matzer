@@ -1,0 +1,43 @@
+.main-img img {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  display: block;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.imgs img {
+  display: block;
+  width: 100%;
+  height: 25vh;
+  object-fit: cover;
+}
+
+.imgs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  padding-bottom: 1rem;
+}
+
+/* Fade in animation */
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in 1 forwards;
+}
+
+section {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(12, 12, 12, 0.5)),
+    url(../../assets/japan-main-hero.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}

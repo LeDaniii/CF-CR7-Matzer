@@ -1,0 +1,99 @@
+section {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(12, 12, 12, 0.5)),
+    url(../../assets/japan-main-hero.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 75vh;
+}
+
+.about-card {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  h1 {
+    color: #ffd740;
+    font-size: 3rem;
+    font-family: "Permanent Marker", cursive;
+  }
+}
+
+.buttons {
+  display: block;
+}
+
+.buttons button {
+  position: relative;
+  display: block;
+  height: 55px;
+  width: 150px;
+  margin: 40px 0;
+  font-weight: 600;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 2rem;
+  border-radius: 0 5px 5px 0;
+  transition: all 0s ease-out;
+}
+button:active {
+  top: 3px;
+}
+
+button.facebook,
+button.facebook span {
+  background: #3b5999;
+  border-left: 1px solid #2e4476;
+  box-shadow: 0px 5px 0px 0px #2e4476;
+}
+button.facebook:active {
+  box-shadow: 0px 2px 0px 0px #2e4476;
+}
+button.twitter,
+button.twitter span {
+  background: #46c1f6;
+  border-left: 1px solid #269bd0;
+  box-shadow: 0px 5px 0px 0px #269bd0;
+}
+button.twitter:active {
+  box-shadow: 0px 2px 0px 0px #269bd0;
+}
+button.instagram,
+button.instagram span {
+  background: #e1306c;
+  border-left: 1px solid #c91d56;
+  box-shadow: 0px 5px 0px 0px #c91d56;
+}
+button.instagram:active {
+  box-shadow: 0px 2px 0px 0px #c91d56;
+}
+button.youtube,
+button.youtube span {
+  background: #de463b;
+  border-left: 1px solid #c02b21;
+  box-shadow: 0px 5px 0px 0px #c02b21;
+}
+button.youtube:active {
+  box-shadow: 0px 2px 0px 0px #c02b21;
+}
+button span {
+  position: absolute;
+  height: 55px;
+  width: 60px;
+  top: 0;
+  left: -61px;
+  line-height: 55px;
+  font-size: 2.5rem;
+  display: block;
+  font-weight: normal;
+  border-radius: 5px 0 0 5px;
+}
+
+button:active span {
+  top: -3px;
+}
+
+.buttons {
+  transform: translateX(20px);
+}

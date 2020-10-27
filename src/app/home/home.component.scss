@@ -1,0 +1,46 @@
+.hero,
+.destinations {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(12, 12, 12, 0.5)),
+    url(../../assets/japan-main-hero.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  h1 {
+    color: #ffd740;
+    font-size: 5rem;
+    font-family: "Permanent Marker", cursive;
+  }
+  p {
+    color: #ffd740;
+    font-size: 2rem;
+    font-family: "Permanent Marker", cursive;
+    line-height: 2rem;
+  }
+}
+
+.destinations {
+  height: auto;
+  img {
+    height: 35vh;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.background-card {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+}
+
+.background-card {
+  h2 {
+    font-size: 2.5rem;
+    font-family: "Permanent Marker", cursive;
+    color: #ffd740;
+  }
+  p {
+    font-size: 1.5rem;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
