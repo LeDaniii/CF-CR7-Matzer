@@ -2,5 +2,9 @@
 
 <div class="cart-item" *ngFor="let item of items">
   <p>{{ item.name }}</p>
-  <p>{{ items.price | currency }}</p>
+  <p>{{ item.price | currency }}</p>
+  <div *ngFor="let date of daterange">
+    <p>{{ date.end }}</p>
+    <p>{{ date.end }}</p>
+  </div>
 </div>

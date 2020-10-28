@@ -13,12 +13,10 @@ export class ServicesComponent implements OnInit {
 
   constructor(private CartService: CartService) {}
 
-  addToCard(service) {
+  addToCart(service) {
     window.alert('Hallo');
     this.CartService.addToCart(service);
   }
 
-  ngOnInit(): void {
-    this.service = services;
-  }
+  ngOnInit(): void {}
 }
