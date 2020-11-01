@@ -12,6 +12,7 @@
             formGroupName="daterange"
           >
             <input
+              (dateChange)="addEvent('change', $event)"
               matStartDate
               placeholder="Start date"
               formControlName="start"

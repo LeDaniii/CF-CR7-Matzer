@@ -3,6 +3,7 @@ import { products } from './../products';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { stringify } from 'querystring';
+import { MatDatepickerInputEvent } from '@angular/material/datepicker';
 
 @Component({
   selector: 'app-tours',
@@ -10,11 +11,17 @@ import { stringify } from 'querystring';
   styleUrls: ['./tours.component.scss'],
 })
 export class ToursComponent implements OnInit {
+  events: string[] = [];
   products = products;
   form: FormGroup;
   product;
 
   constructor(private fb: FormBuilder, private CartService: CartService) {}
+
+  addEvent(type: string, event: MatDatepickerInputEvent<Date>) {
+    this.events.push(`${type}: ${event.value}`);
+    console.log(this.events);
+  }
 
   ngOnInit(): void {
     this.form = this.fb.group({
@@ -33,8 +40,9 @@ export class ToursComponent implements OnInit {
     //  for (let prop in FormGroup) {
     //    console.log(prop, FormGroup[prop]);
     //  }
-    let date = JSON.stringify(this.form.value.FormGroup);
-    this.CartService.addToCart(this.form.value);
-    console.log(date);
+    // let date = JSON.stringify(this.form.value.FormGroup);
+
+    this.CartService.addToCart(this.events);
+    // console.log(date);
   }
 }
